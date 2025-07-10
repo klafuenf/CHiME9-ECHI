@@ -1,0 +1,8 @@
+root_dir: data/working_dir
+
+ref_segment_dir: ${root_dir}/ref_segments/{dataset}/{device}/{segment_type}
+
+exps_dir: ${root_dir}/experiments
+evaluation_dir: ${exps_dir}/{exp_name}/evaluation
+segment_dir: ${evaluation_dir}/segments/{device}/{segment_type}
+report_file: ${evaluation_dir}/reports/report.{dataset}.{device}.{segment_type}.{session}.{pid}.csv
