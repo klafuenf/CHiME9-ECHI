@@ -1,5 +1,6 @@
 # uv lock file - ignore for now
 uv.lock
+.idea
 
 .vscode
 

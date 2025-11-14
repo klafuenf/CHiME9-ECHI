@@ -55,29 +55,13 @@ For detailed information about the challenge, please refer to the main website:
 
 ## <a id="#install">1. Installing the software</a>
 
-Clone this repository from GitHub
+The  uv tool does the installation of all dependencies
+
+https://docs.astral.sh/uv/
 
 ```bash
-git clone git@github.com:CHiME9-ECHI/CHiME9-ECHI.git
-cd CHiME9-ECHI
+uv sync
 ```
-
-The installation of the necessary tools is detailed in `install.sh`.
-We recommend following it step-by-step and adjusting for your system if needed.
-The script will build a conda environment called `echi_recipe` and install the
-dependencies listed in `environment.yaml`.
-
-When running the system, remember to activate the conda environment and set the
-necessary environment variables,
-
-```bash
-conda activate echi_recipe
-export PYTHONPATH="$PWD/src:$PYTHONPATH"
-```
-
-To make the `PYTHONPATH` setting persistent across terminal sessions, you can add
- the `export` command to your shell's configuration file (e.g., `~/.bashrc` for
- bash or `~/.zshrc` for zsh).
 
 ## <a id="data"> 2. Installing the data </a>
 
@@ -151,22 +135,6 @@ Details can be found on the [training page](docs/training.md).
 ## <a id="troubleshooting">4. Troubleshooting</a>
 
 If you encounter issues, here are some common troubleshooting steps:
-
-- **Activate Conda Environment:** Ensure your Conda environment (`echi_recipe`) is
- activated:
-
-  ```bash
-  conda activate echi_recipe
-  ```
-
-- **Check PYTHONPATH:** Verify that your `PYTHONPATH` environment variable is correctly
- set to include the `src` directory of this project:
-
-  ```bash
-  export PYTHONPATH="$PWD/src:$PYTHONPATH"
-  # (or ensure this is in your .bashrc or equivalent shell startup script)
-  echo $PYTHONPATH
-  ```
 
 - **Verify Data Paths:** Double-check that the dataset paths in `config/paths.yaml`
  match the actual location of your CHiME-9 ECHi data. The default expected location
